@@ -6,17 +6,17 @@ This repository contains the implementations in Keras of various methods to unde
 * Integrated gradient [https://arxiv.org/abs/1703.01365]
 * Visual backprop [https://arxiv.org/abs/1611.05418]
 
-Each of them is accompanied with the corresponding smoothgrad version (), which improves on any baseline method by adding random noise.
+Each of them is accompanied with the corresponding smoothgrad version [https://arxiv.org/abs/1706.03825], which improves on any baseline method by adding random noise.
 
 Courtesy of https://github.com/tensorflow/saliency, https://github.com/mbojarski/VisualBackProp.
 
 # Examples
 
-* Doberman
+* Dog
 
 <img width="700" src="images/doberman_viz.png">
 
-* Pug and Cat
+* Dog and Cat
 
 <img width="700" src="images/cat_dog_viz.png">
 
