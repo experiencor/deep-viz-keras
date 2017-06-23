@@ -14,11 +14,11 @@ Courtesy of https://github.com/tensorflow/saliency, https://github.com/mbojarski
 
 * Doberman
 
-<img width="500" src="images/visualization_1.png">
+<img width="500" src="images/doberman_viz.png">
 
 * Pug and Cat
 
-<img width="500" src="images/visualization_2.png">
+<img width="500" src="images/cat_dog_viz.png">
 
 
 # Usage
