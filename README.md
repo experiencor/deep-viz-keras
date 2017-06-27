@@ -8,7 +8,7 @@ This repository contains the implementations in Keras of various methods to unde
 
 Each of them is accompanied with the corresponding smoothgrad version [https://arxiv.org/abs/1706.03825], which improves on any baseline method by adding random noise.
 
-Courtesy of https://github.com/tensorflow/saliency, https://github.com/mbojarski/VisualBackProp.
+Courtesy of https://github.com/tensorflow/saliency and https://github.com/mbojarski/VisualBackProp.
 
 # Examples
 
