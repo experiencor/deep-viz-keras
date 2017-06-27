@@ -25,12 +25,18 @@ Courtesy of https://github.com/tensorflow/saliency, https://github.com/mbojarski
 
 cd deep-viz-keras
 
-```
+```python
 from guided_backprop import GuidedBackprop
 from utils import *
+from keras.applications.vgg16 import VGG16
 
+# Load the pretrained VGG16 model and make the guided backprop operator
+vgg16_model = VGG16(weights='imagenet')
+vgg16_model.compile(loss='categorical_crossentropy', optimizer='adam')
 guided_bprop = GuidedBackprop(vgg16_model)
-image = load_image(/path/to/image)
+
+# Load the image and compute the guided gradient
+image = load_image('/path/to/image')
 mask = guided_bprop.get_mask(image)               # compute the gradients
 show_image(mask)                                  # display the grayscaled mask
 ```
