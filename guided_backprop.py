@@ -56,6 +56,7 @@ class GuidedBackprop(SaliencyMask):
                 K.set_learning_phase(0)
                 load_model('/tmp/gb_keras.h5', custom_objects={"custom_loss":custom_loss})
                 session = K.get_session()
+                tf.train.export_meta_graph()
                 
                 saver = tf.train.Saver()
                 saver.save(session, '/tmp/guided_backprop_ckpt')
@@ -65,7 +66,7 @@ class GuidedBackprop(SaliencyMask):
             self.guided_sess = tf.Session(graph = self.guided_graph)
 
             with self.guided_graph.gradient_override_map({'Relu': 'GuidedRelu'}):
-                tf.import_graph_def(session.graph_def, name='')
+                saver = tf.train.import_meta_graph('/tmp/guided_backprop_ckpt.meta')
                 saver.restore(self.guided_sess, '/tmp/guided_backprop_ckpt')
 
                 self.imported_y = self.guided_graph.get_tensor_by_name(model.output.name)[0][output_index]
