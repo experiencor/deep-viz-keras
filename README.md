@@ -42,3 +42,7 @@ show_image(mask)                                  # display the grayscaled mask
 ```
 
 The examples.ipynb contains the demos of all implemented methods using the built-in VGG16 model of Keras.
+
+# Notes
+
++ To compute gradient of any output w.r.t. any input https://github.com/experiencor/deep-viz-keras/issues/5#issuecomment-376452683.
