@@ -14,7 +14,7 @@
 
 """Utilites to computed GuidedBackprop SaliencyMasks"""
 
-from saliency import SaliencyMask
+from .saliency import SaliencyMask
 import numpy as np
 import tensorflow as tf
 import keras.backend as K

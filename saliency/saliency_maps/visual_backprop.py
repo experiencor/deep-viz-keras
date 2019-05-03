@@ -1,4 +1,4 @@
-from saliency import SaliencyMask
+from .saliency import SaliencyMask
 import numpy as np
 import keras.backend as K
 from keras.layers import Input, Conv2DTranspose

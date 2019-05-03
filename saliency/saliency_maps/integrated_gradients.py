@@ -15,7 +15,7 @@
 """Utilities to compute an IntegratedGradients SaliencyMask."""
 
 import numpy as np
-from saliency import GradientSaliency
+from .saliency import GradientSaliency
 
 class IntegratedGradients(GradientSaliency):
     """A SaliencyMask class that implements the integrated gradients method.
