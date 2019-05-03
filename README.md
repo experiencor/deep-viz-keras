@@ -23,11 +23,14 @@ Courtesy of https://github.com/tensorflow/saliency and https://github.com/mbojar
 
 # Usage
 
-cd deep-viz-keras
+```
+# to install the package
+!pip install git+https://github.com/mzmmoazam/deep-viz-keras.git
 
+```
 ```python
-from guided_backprop import GuidedBackprop
-from utils import *
+from saliency import GuidedBackprop
+from saliency.utils import load_image,show_image
 from keras.applications.vgg16 import VGG16
 
 # Load the pretrained VGG16 model and make the guided backprop operator
@@ -41,7 +44,7 @@ mask = guided_bprop.get_mask(image)               # compute the gradients
 show_image(mask)                                  # display the grayscaled mask
 ```
 
-The examples.ipynb contains the demos of all implemented methods using the built-in VGG16 model of Keras.
+The saliency_demo.ipynb contains the demos of all implemented methods using the built-in VGG16 model of Keras.
 
 # Notes
 
