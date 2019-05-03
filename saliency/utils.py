@@ -1,3 +1,7 @@
+import PIL
+import matplotlib.pyplot as plt
+import numpy as np
+
 def show_image(image, grayscale = True, ax=None, title=''):
     if ax is None:
         plt.figure()
