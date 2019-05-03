@@ -24,7 +24,7 @@ setup(name='saliency',
           'numpy',
           'keras',
           'matplotlib',
-          'PIL',
+          'Pillow',
           'tensorflow'
       ],
       include_package_data=True,
